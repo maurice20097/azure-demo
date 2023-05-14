@@ -11,7 +11,7 @@
       <template #footer v-if="layer.showButton">
         <div>
           <el-button type="primary" @click="confirm">确认</el-button>
-          <el-button @click="close">取消</el-button>
+          <el-button @click="layer.show = false">取消</el-button>
         </div>
       </template>
     </el-dialog>
@@ -20,7 +20,7 @@
 
 <script>
 import { defineComponent, ref, watch } from 'vue'
-import drag from '@/directive/drag/index'
+// import drag from '@/directive/drag/index'
 export default defineComponent({
   props: {
     layer: {
@@ -35,15 +35,16 @@ export default defineComponent({
       required: true
     }
   },
-  directives: {
-    drag
-  },
+  // directives: {
+  //   drag
+  // },
   setup(props, ctx) {
     const dialog = ref(null)
     function confirm() {
       ctx.emit('confirm')
     }
     function close() {
+      console.log(dialog);
       dialog.value.handleClose()
     }
     return {

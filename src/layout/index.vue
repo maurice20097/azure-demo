@@ -46,13 +46,13 @@ import { useEventListener } from "@vueuse/core";
 import Menu from "./Menu/index.vue";
 import Logo from "./Logo/index.vue";
 import Header from "./Header/index.vue";
-import Tabs from "./Tabs/index.vue";
+// import Tabs from "./Tabs/index.vue";
 export default defineComponent({
   components: {
     Menu,
     Logo,
     Header,
-    Tabs,
+    // Tabs,
   },
   setup() {
     const store = useStore();
@@ -60,7 +60,7 @@ export default defineComponent({
     const isCollapse = computed(() => store.state.app.isCollapse);
     const contentFullScreen = computed(() => store.state.app.contentFullScreen);
     const showLogo = computed(() => store.state.app.showLogo);
-    const showTabs = computed(() => store.state.app.showTabs);
+    // const showTabs = computed(() => store.state.app.showTabs);
     const keepAliveComponentsName = computed(() => store.getters['keepAlive/keepAliveComponentsName']);
     // 页面宽度变化监听后执行的方法
     const resizeHandler = () => {
@@ -85,7 +85,7 @@ export default defineComponent({
     return {
       isCollapse,
       showLogo,
-      showTabs,
+      // showTabs,
       contentFullScreen,
       keepAliveComponentsName,
       hideMenu,

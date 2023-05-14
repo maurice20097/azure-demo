@@ -11,8 +11,8 @@
       <!-- 快捷功能按钮 -->
       <div class="function-list">
         <div class="function-list-item hidden-sm-and-down"><Full-screen /></div>
-        <div class="function-list-item"><SizeChange /></div>
-        <div class="function-list-item hidden-sm-and-down"><Theme /></div>
+        <!-- <div class="function-list-item"><SizeChange /></div>
+        <div class="function-list-item hidden-sm-and-down"><Theme /></div> -->
       </div>
       <!-- 用户信息 -->
       <div class="user-info">
@@ -39,16 +39,16 @@ import { defineComponent, computed, reactive } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter, useRoute } from 'vue-router'
 import FullScreen from './functionList/fullscreen.vue'
-import SizeChange from './functionList/sizeChange.vue'
-import Theme from './functionList/theme.vue'
+// import SizeChange from './functionList/sizeChange.vue'
+// import Theme from './functionList/theme.vue'
 import Breadcrumb from './Breadcrumb.vue'
 import PasswordLayer from './passwordLayer.vue'
 export default defineComponent({
   components: {
     FullScreen,
     Breadcrumb,
-    SizeChange,
-    Theme,
+    // SizeChange,
+    // Theme,
     PasswordLayer
   },
   setup() {
